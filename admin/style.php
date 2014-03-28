@@ -4,7 +4,8 @@ $s = parse_ini_file("settings.ini");
 
       
 body {
-	background:#eee;
+	background:<?=$s[dark_color];?>;
+	background:url(<?=$s[background];?>);
 	font-family:Helvetica, Arial, sans-serif;
 	font-size:16px;
 	margin:auto auto;

@@ -42,7 +42,7 @@ $s = parse_ini_file("./admin/settings.ini");
 		});
 		
 		
-		if(screen.width < 500 ||
+		/*if(screen.width < 500 ||
 			navigator.userAgent.match(/Android/i) ||
 			navigator.userAgent.match(/webOS/i) ||
 			navigator.userAgent.match(/iPhone/i) ||
@@ -56,10 +56,8 @@ $s = parse_ini_file("./admin/settings.ini");
 		} else {
 	   		
 	  		$.backstretch("/<?=$s[background];?>");
-		}
+		}*/
 			
 	});
 	</script>
-
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
 

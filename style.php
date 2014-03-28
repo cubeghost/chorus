@@ -5,7 +5,7 @@ $s = parse_ini_file("./admin/settings.ini");
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
 
 * {padding:0;margin:0;outline:none;}
-body {font-family:'Open Sans',sans-serif;}
+body {font-family:'Open Sans',sans-serif;background:<?=$s[dark_color];?>;background:url(<?=$s[background];?>);}
 
 h2 {font-size:30px;font-weight:300;width:100%;}
 
