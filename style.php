@@ -7,7 +7,7 @@ $s = parse_ini_file("./admin/settings.ini");
 * {padding:0;margin:0;outline:none;}
 body {font-family:'Open Sans',sans-serif;background:<?=$s[dark_color];?> url(<?=$s[background];?>);}
 
-h2 {font-size:30px;font-weight:300;width:100%;}
+h2 {font-size:30px;font-weight:300;width:100%;padding:2em;}
 
 h2 a {color:#eee;text-decoration:none;opacity:0.6;}
 

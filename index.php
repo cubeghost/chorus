@@ -8,8 +8,10 @@ include 'header.php';
 <body>	
 <div class="alpha">
 	<h2>hello</h2>
-	<div class="links">
 		<?php echo $content['content.txt']; ?>
-	</div>
+</div>
+<div class="alpha">
+	<h2>hello 2</h2>
+		<?php echo $content['content2.txt']; ?>
 </div>
 </body>
