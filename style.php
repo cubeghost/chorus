@@ -13,7 +13,7 @@ h2 a {color:#eee;text-decoration:none;opacity:0.6;}
 
 ::selection {background:<?=$s[light_color];?>;}
 
-.alpha {margin-top:7%;margin-left:45%;width:50%;}
+.alpha {width:70%;margin:100px auto;}
 
 ::-webkit-scrollbar              {width:9px;height:9px;background: <?=$s[dark_color];?>;}
 ::-webkit-scrollbar-button       {}

@@ -6,7 +6,7 @@ include 'header.php';
 </style>
 
 <body>	
-<div id="alpha">
+<div class="alpha">
 	<h2>hello</h2>
 	<div class="links">
 		<?php echo $content['content.txt']; ?>
