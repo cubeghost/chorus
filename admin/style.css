@@ -1,0 +1,77 @@
+* {box-sizing:border-box;padding:0;margin:0;outline:0;}
+html {height:100%;}
+body {background:#555 url(http://s.goose.im/16-17.png);font-family:'PT Sans',sans-serif!important;font-weight:400;height:100%;overflow:hidden;font-size:16px;}
+
+
+/* structure */
+.alpha {width:200%;height:100%;}
+article {margin-bottom:4px;}
+
+.beta {width:13%;height:100%;background:rgba(14,14,14,0.75);display:block;padding:12px;float:left;overflow:scroll;}
+
+a.add {float:right;display:inline;text-decoration:none;font-size:1.5em;line-height:1em;color:#aaa;}
+a.add:hover {color:#fff;}
+
+.gamma {width:100%;background:#fff;border-radius:4px;display:block;margin-bottom:12px;}
+.gamma .delta {padding:8px;border-bottom:1px #ddd solid;display:block;color:#888;text-decoration:none;}
+.gamma .delta:hover {color:#111;}
+.gamma .delta:last-child {border-bottom:none;}
+
+input.delta {display:inline-block;width:70%;border:none;font-size:1em;font-family:'PT Sans',sans-serif;line-height:20px;}
+.gamma label {float:left;width:30%;text-transform:uppercase;font-weight:700;font-size:0.8em;padding:9px 8px 7px 8px;color:#888;border-bottom:1px #ddd solid;line-height:20px;margin:0;vertical-align:bottom;}
+input.delta:first-of-type {border-top-right-radius:4px;border-top-left-radius:4px;}
+input.delta:last-of-type {border-bottom-right-radius:4px;border-bottom-left-radius:4px;}
+
+.zeta {width:27%;height:100%;float:left;background:rgba(14,14,14,0.75);display:none;padding:12px;}
+
+.omega {width:37%;height:100%;background:rgba(0,0,0,0.3);font-family:'Abril Fatface';float:left;}
+.omega p {color:#f32280;width:80%;display:block;margin:10%;font-size:6em;line-height:0.9em;}
+.omega p a {color:rgba(243,34,128,0.79);}
+
+
+/* specific */
+a {color:#eee;}
+a:hover {color:#f32280;text-decoration:none;}
+
+h1 {font-family:'PT Sans',sans-serif!important;font-size:0.8em;padding-bottom:10px;margin:0;}
+h1 a {color:#aaa;}
+h1 a:hover {color:#eee;text-decoration:none!important;}
+
+h1, .gamma label, input[type=submit], .gamma.upload, .toggle, .view {color:#aaa;font-weight:700;text-transform:uppercase;}
+input[type=submit] {background:none;border:none;font-size:0.8em;}
+.settings_submit,#flogin {width:100%;line-height:20px;padding:8px;font-size:0.8em;}
+.settings_submit:hover,#flogin:hover {color:#111;cursor:pointer;}
+
+.edit_submit {font-size:1em!important;}
+.edit_submit:hover {color:#90c75c;}
+
+.CodeMirror {height:auto;padding:12px 12px 12px 0;font-size:14px;}
+
+.back,a.help {float:right;}
+.back:hover {color:#eee;}
+
+.gamma .delta.toggle,.view {font-size:0.8em;text-align:center;line-height:20px;vertical-align:bottom;color:#aaa;}
+.view {padding:8px;}
+.gamma .delta.toggle:hover,.view:hover {color:#111;text-decoration:none;}
+
+.gamma.upload {min-height:70px;}
+.dz-message {padding:5% 4%;text-align:center;font-size:0.9em;}
+
+.uploads {display:block;padding:2px;}
+
+.saved {padding-left:10px;color:#90c75c;}
+
+.beta::-webkit-scrollbar              {width:6px;height:0;background:rgba(14,14,14,0);}
+.beta::-webkit-scrollbar-button       {}
+.beta::-webkit-scrollbar-corner       {background:rgba(14,14,14,0);}
+.beta::-webkit-resizer                {}
+.beta::-webkit-scrollbar-track        {}
+.beta::-webkit-scrollbar-track-piece  {}
+.beta::-webkit-scrollbar-thumb        {background:rgba(255,255,255,0.2);border-radius:4px;;}
+
+
+/* login page */
+.nyoom {width:300px;margin:100px auto;background:rgba(0,0,0,0.25);padding:12px;}
+#login {background:#fff;border-radius:4px;}
+#login input {font-family:'PT Sans',sans-serif!important;}
+#login .delta {border-bottom:1px #ddd solid;width:100%;line-height:20px;padding:8px;}

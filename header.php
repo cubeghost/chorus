@@ -1,65 +1,25 @@
-<?php
-if ($handle = opendir('./data/')) {
-    while (false !== ($file = readdir($handle))) {
-        if ($file != "." && $file != "..") {
-			$fileContent = file_get_contents('./data/' . $file);
-            $content[$file] = $fileContent;
-        }
+<?php 
+$texts = scandir('txt/');
+foreach($texts as $text) {
+    if (is_file('txt/'.$text) == true) {
+        $txt_content = file_get_contents('txt/'.$text);
+        $txt[$text] = $txt_content;
     }
-    closedir($handle);
 }
 
-$s = parse_ini_file("./admin/settings.ini");
+$s = parse_ini_file("admin/settings.ini");
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html>
 <head>
-<title><?=$s[site_title];?></title>
-
-<meta name="viewport" content="width=device-width,max-width:devide-width,min-width:device-width,user-scalable=no" />
-
-<link rel="stylesheet" href="/style.php" type="text/css" charset="utf-8">
-
-	<script type="text/javascript" src="/jquery.min.js"></script> 
-
-	<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
-	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css?v=2.1.2" type="text/css" media="screen" />
-	<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.2"></script>
-
-	<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-	<script type="text/javascript" src="/fancybox/helpers/jquery.fancybox-media.js?v=1.0.4"></script>
-
-	<script type="text/javascript" src="/jquery.backstretch.min.js"></script> 
-
-	<script type="text/javascript">
-	$(document).ready(function() {
-	
-		$('.fancylink').fancybox({
-			padding:					0,
-			closeBtn:					false,
-			arrows:						false,
-			minWidth:					'90%'
-		});
-		
-		
-		if(screen.width < 500 ||
-			navigator.userAgent.match(/Android/i) ||
-			navigator.userAgent.match(/webOS/i) ||
-			navigator.userAgent.match(/iPhone/i) ||
-			navigator.userAgent.match(/iPod/i) ) {
-			
-			$("#taco").css({'width':'100%','margin-left':'0%','font-size':'10em'});
-			$(".links a").css({'width':'90%','border-right':'0'});
-			$("h2").css({'margin':'10px'});
-			$.backstretch("/<?=$s[background_mobile];?>");
-						
-		} else {
-	   		
-	  		$.backstretch("/<?=$s[background];?>");
-		}
-			
-	});
-	</script>
-
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
-
+	<title><?=$s['title'];?></title>
+	<link href="http://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400italic,400,700italic,700" rel="stylesheet" type="text/css">
+  	<style type="text/css">
+    	* {box-sizing:border-box;padding:0;margin:0;outline:0;}
+      	body {background:#333 url(http://s.goose.im/16-17.png);color:#fff;font-family:'PT Sans',sans-serif;}
+      	.alpha {width:800px;margin:10% auto;background:rgba(0,0,0,0.75);padding:5%;}
+      	h1 {font-family:'Abril Fatface';font-size:4em;font-weight:400;}
+      	a {color:#eee;text-decoration:none;}
+      	a:hover {color:<?=$s['color'];?>;}
+ 	</style>
