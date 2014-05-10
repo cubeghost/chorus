@@ -7,7 +7,7 @@ body {background:#555 url(http://s.goose.im/16-17.png);font-family:'PT Sans',san
 .alpha {width:200%;height:100%;}
 article {margin-bottom:4px;}
 
-.beta {width:13%;height:100%;background:rgba(14,14,14,0.75);display:block;padding:12px;float:left;overflow:scroll;}
+.beta {width:13%;height:100%;background:rgba(14,14,14,0.75);display:block;padding:12px;float:left;overflow-y:scroll;}
 
 a.add {float:right;display:inline;text-decoration:none;font-size:1.5em;line-height:1em;color:#aaa;}
 a.add:hover {color:#fff;}
@@ -22,7 +22,7 @@ input.delta {display:inline-block;width:70%;border:none;font-size:1em;font-famil
 input.delta:first-of-type {border-top-right-radius:4px;border-top-left-radius:4px;}
 input.delta:last-of-type {border-bottom-right-radius:4px;border-bottom-left-radius:4px;}
 
-.zeta {width:27%;height:100%;float:left;background:rgba(14,14,14,0.75);display:none;padding:12px;}
+.zeta {width:27%;height:100%;float:left;background:rgba(14,14,14,0.75);display:none;padding:12px;overflow-y:scroll;}
 
 .omega {width:37%;height:100%;background:rgba(0,0,0,0.3);font-family:'Abril Fatface';float:left;}
 .omega p {color:#f32280;width:80%;display:block;margin:10%;font-size:6em;line-height:0.9em;}
@@ -61,17 +61,21 @@ input[type=submit] {background:none;border:none;font-size:0.8em;}
 
 .saved {padding-left:10px;color:#90c75c;}
 
-.beta::-webkit-scrollbar              {width:6px;height:0;background:rgba(14,14,14,0);}
-.beta::-webkit-scrollbar-button       {}
-.beta::-webkit-scrollbar-corner       {background:rgba(14,14,14,0);}
-.beta::-webkit-resizer                {}
-.beta::-webkit-scrollbar-track        {}
-.beta::-webkit-scrollbar-track-piece  {}
-.beta::-webkit-scrollbar-thumb        {background:rgba(255,255,255,0.2);border-radius:4px;;}
+.beta::-webkit-scrollbar,.zeta::-webkit-scrollbar {width:6px;height:0;background:rgba(14,14,14,0);}
+.beta::-webkit-scrollbar-corner,.zeta::-webkit-scrollbar-corner {background:rgba(14,14,14,0);}
+.beta::-webkit-scrollbar-thumb,.zeta::-webkit-scrollbar-thumb {background:rgba(255,255,255,0.2);border-radius:4px;}
 
+article.help {color:#fff;font-size:18px;}
+.help code {display:inline;background:none;color:#f32280;line-height:25.714px;}
+.help h3 {font-family:'PT Sans',sans-serif;font-weight:700;}
+p.face {font-family:monospace;letter-spacing:-3px;}
+.help a {text-decoration:underline;}
 
 /* login page */
 .nyoom {width:300px;margin:100px auto;background:rgba(0,0,0,0.25);padding:12px;}
 #login {background:#fff;border-radius:4px;}
 #login input {font-family:'PT Sans',sans-serif!important;}
 #login .delta {border-bottom:1px #ddd solid;width:100%;line-height:20px;padding:8px;}
+
+::-moz-selection {background:#f32280;}
+::selection {background:#f32280;}

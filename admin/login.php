@@ -2,8 +2,8 @@
 
 session_start();
 
-$adminuser = "admin";
-$adminpass = "password";
+$adminuser = "admin"; // CHANGE THIS TO A NEW USERNAME
+$adminpass = "password"; // CHANGE THIS TO A NEW PASSWORD
 
 //get the posted values
 $username = $_POST['username'];

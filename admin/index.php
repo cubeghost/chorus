@@ -1,4 +1,9 @@
 <?php
+
+// CHORUS CMS by alex baldwin 
+// http://goose.im/
+// http://chorus.goose.im/
+
 session_start();
 
 if(empty($_SESSION['admin'])) { 
@@ -7,7 +12,7 @@ if(empty($_SESSION['admin'])) {
 <html>
 <head>
 	<title>admin</title>
-	<link rel="stylesheet" href="style.css?2" type="text/css">
+	<link rel="stylesheet" href="style.css" type="text/css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>	
 	<script>
@@ -125,7 +130,12 @@ if (empty($editing)) {
 			}
 			$viewpage = $uploadlist;
 		} else if ($view == 'help') {
-			$viewpage = '<h1>instructions</h1>';
+			$helpfile = file_get_contents('help.txt');
+			$viewpage = '<h1>instructions<a href="./" class="back">close</a></h1>
+			<article class="help">
+				' . $helpfile . '
+			</article>
+			';
 		}
 	} 
 } else {
@@ -162,7 +172,7 @@ if (empty($editing)) {
 	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400italic,400,700italic,700" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css">
 	
-	<link href="style.css?10" rel="stylesheet" type="text/css">
+	<link href="style.css?1" rel="stylesheet" type="text/css">
 
 	<script type="text/javascript">
 	$(document).ready(function() {
@@ -275,6 +285,7 @@ if (empty($editing)) {
 				<h1><a href="logout.php">log out</a><a href="?view=help" class="help">help</a></h1>
 			</article>
 		</section>
+		
 		<section class="zeta">
 			<?=$viewpage;?>
 			<form class="edit_form" action="save.php" method="POST">

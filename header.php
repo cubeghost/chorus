@@ -10,6 +10,7 @@ foreach($texts as $text) {
 $s = parse_ini_file("admin/settings.ini");
 ?>
 <!DOCTYPE html>
+<!-- running on CHORUS : http://chorus.goose.im/ -->
 <html>
 <head>
 	<title><?=$s['title'];?></title>
