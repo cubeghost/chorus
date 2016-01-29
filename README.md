@@ -19,13 +19,13 @@ The default login information is `admin` and `password`- you're going to want to
 To add editable content areas, you have to start with text files! For each content area you want, you have to create a `[name].txt` file in the `txt` folder on your server, replacing [name] with a title for each area. If you already have content, go ahead and place it in these files.
 
 ### 4. Including header.php
-In your index file and any other pages you want to manage using chorus, you'll need to include header.php. First, make sure you're ready to use PHP, the language chorus runs on- your files will need to have .php extensions instead of .html extensions if you want to use chorus with them. To include the header, add `&lt;?php include 'header.php'; ?&gt;` to the very top of your file(s).
+In your index file and any other pages you want to manage using chorus, you'll need to include header.php. First, make sure you're ready to use PHP, the language chorus runs on- your files will need to have .php extensions instead of .html extensions if you want to use chorus with them. To include the header, add `<?php include 'header.php'; ?>` to the very top of your file(s).
 
 ### 5. Including content files
-Now you have to place the content in your pages! To do this, just paste `&lt;?=$txt['[name].txt'];?&gt;` wherever you want the content to be in your page's HTML, changing [name] respectively for each content file.
+Now you have to place the content in your pages! To do this, just paste `<?=$txt['[name].txt'];?>` wherever you want the content to be in your page's HTML, changing [name] respectively for each content file.
 
 ### 6. Using settings variables
-To implement settings, paste `&lt;?=$s['name-of-setting'];?&gt;` wherever those variables need to go. For example, if you have inline css on your page, you could do `body {background-color:&lt;?=$s['color'];?&gt;}`.
+To implement settings, paste `<?=$s['name-of-setting'];?>` wherever those variables need to go. For example, if you have inline css on your page, you could do `body {background-color:<?=$s['color'];?>}`.
 
 And you're done with the basic setup! For more tips, keep reading.
 
